@@ -129,6 +129,10 @@ public class HBaseTest {
         } else {
             System.out.println("Table does not exist!");
         }
+
+        // 关闭连接，释放资源
+        table.close();
+        conn.close();
     }
 
     public static Put assembleData(String rowKey, String val1, String val2, String val3, String val4){
